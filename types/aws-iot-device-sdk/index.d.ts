@@ -138,6 +138,12 @@ export interface DeviceOptions extends mqtt.IClientOptions {
   // NB Not documented but present in examples, see
   // https://github.com/aws/aws-iot-device-sdk-js/blob/97b0b468d/device/index.js#L436
   debug?: boolean;
+
+  /**
+   * used to report SDK version usage metrics. It is set to true by default.
+   * To disable metrics collection, set value to false.
+   */
+  enableMetrics?: boolean;
 }
 
 export class device extends NodeJS.EventEmitter {
